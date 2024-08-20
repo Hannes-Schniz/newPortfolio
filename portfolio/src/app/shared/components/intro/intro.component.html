@@ -1,5 +1,5 @@
 <div class="frame">
-    <div *ngFor="let item of this.images; let i = index" [class]="this.getClasses(i)" [style]="this.getStyle(i)">
+    <div *ngFor="let item of this.screen; let i = index" [class]="this.getClasses(i)" [style]="this.getStyle(i)">
         <img [src]="this.getImg(i)">
 
         <app-text-container class="textContainer" [title]="this.getTitle(i)"
