@@ -2,18 +2,15 @@
   height: inherit;
   width: inherit;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-template-rows: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, auto));
+  grid-template-rows: repeat(3, minmax(0, auto));
   grid-template-areas:
-    "one two"
-    "three four"
-    "five six";
+    "one two three"
+    "four five six"
+    "seven eight nine";
 
-  .one {
-    grid-area: one;
-  }
   .one:hover {
-    animation: zoomIntopleft 0.1s linear;
+    animation: zoomInTopLeft 0.1s linear;
     animation-fill-mode: forwards;
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
 
@@ -21,11 +18,9 @@
       display: flex;
     }
   }
-  .two {
-    grid-area: two;
-  }
+
   .two:hover {
-    animation: zoomIntopright 0.1s linear;
+    animation: zoomInTop 0.1s linear;
     animation-fill-mode: forwards;
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
 
@@ -33,10 +28,18 @@
       display: flex;
     }
   }
-  .three {
-    grid-area: three;
-  }
+
   .three:hover {
+    animation: zoomInTopRight 0.1s linear;
+    animation-fill-mode: forwards;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+
+    .textContainer {
+      display: flex;
+    }
+  }
+
+  .four:hover {
     animation: zoomInLeft 0.1s linear;
     animation-fill-mode: forwards;
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
@@ -45,35 +48,48 @@
       display: flex;
     }
   }
-  .four {
-    grid-area: four;
+
+  .five:hover {
+    animation: zoomIn 0.1s linear;
+    animation-fill-mode: forwards;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+
+    .textContainer {
+      display: flex;
+    }
   }
-  .four:hover {
+  .six:hover {
     animation: zoomInRight 0.1s linear;
     animation-fill-mode: forwards;
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
 
     .textContainer {
-      display: flex;
+      display: flex !important;
     }
   }
-  .five {
-    grid-area: five;
-  }
-  .five:hover {
-    animation: zoomInbottomleft 0.1s linear;
+
+  .seven:hover {
+    animation: zoomInBottomLeft 0.1s linear;
     animation-fill-mode: forwards;
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
 
     .textContainer {
-      display: flex;
+      display: flex !important;
     }
   }
-  .six {
-    grid-area: six;
+
+  .eight:hover {
+    animation: zoomInBottom 0.1s linear;
+    animation-fill-mode: forwards;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+
+    .textContainer {
+      display: flex !important;
+    }
   }
-  .six:hover {
-    animation: zoomInbottomright 0.1s linear;
+
+  .nine:hover {
+    animation: zoomInBottomRight 0.1s linear;
     animation-fill-mode: forwards;
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
 
@@ -101,28 +117,28 @@
   display: none;
 }
 
-@keyframes zoomInbottomleft {
+@keyframes zoomInBottomLeft {
   to {
     transform: scale(1.2);
     transform-origin: bottom left;
   }
 }
 
-@keyframes zoomInbottomright {
+@keyframes zoomInBottomRight {
   to {
     transform: scale(1.2);
     transform-origin: bottom right;
   }
 }
 
-@keyframes zoomIntopleft {
+@keyframes zoomInTopLeft {
   to {
     transform: scale(1.2);
     transform-origin: top left;
   }
 }
 
-@keyframes zoomIntopright {
+@keyframes zoomInTopRight {
   to {
     transform: scale(1.2);
     transform-origin: top right;
@@ -140,5 +156,50 @@
   to {
     transform: scale(1.2);
     transform-origin: right;
+  }
+}
+
+@keyframes zoomInBottom {
+  to {
+    transform: scale(1.2);
+    transform-origin: bottom;
+  }
+}
+
+@keyframes zoomInTop {
+  to {
+    transform: scale(1.2);
+    transform-origin: top;
+  }
+}
+
+@keyframes zoomIn {
+  to {
+    transform: scale(1.2);
+  }
+}
+
+.fadeOut {
+  animation: fadeOut 0.5s linear;
+  animation-fill-mode: forwards;
+}
+
+.fadeIn {
+  animation: fadeIn 0.5s linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

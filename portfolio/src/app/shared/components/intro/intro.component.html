@@ -1,8 +1,9 @@
 <div class="frame">
-    <div *ngFor="let item of this.images" [class]="item.position">
-        <img [src]="item.img">
+    <div *ngFor="let item of this.images; let i = index" [class]="this.getClasses(i)" [style]="this.getStyle(i)">
+        <img [src]="this.getImg(i)">
 
-        <app-text-container class="textContainer" [title]="item.title" [text]="item.text"></app-text-container>
+        <app-text-container class="textContainer" [title]="this.getTitle(i)"
+            [text]="this.getText(i)"></app-text-container>
     </div>
 
 
