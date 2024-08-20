@@ -82,7 +82,7 @@ export class IntroComponent {
   constructor() {
     setInterval(() => {
       this.switchImages();
-    }, 8000);
+    }, 12000);
   }
 
   getTitle(index: number): string {
@@ -151,10 +151,10 @@ export class IntroComponent {
     }
     setTimeout(() => {
       this.animateFadeout(randomIndexTwo);
-    }, 200);
+    }, 2000);
     setTimeout(() => {
       this.swapImages(randomIndexOne, randomIndexTwo);
-    }, 2000);
+    }, 4000);
   }
 
   swapImages(indexOne: number, indexTwo: number): void {
@@ -165,7 +165,7 @@ export class IntroComponent {
     this.animateFadein(indexTwo);
     setTimeout(() => {
       this.animateFadein(indexOne);
-    }, 200);
+    }, 2000);
   }
 
   animateFadeout(index: number): void {
