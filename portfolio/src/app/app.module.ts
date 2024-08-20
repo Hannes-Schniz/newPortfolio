@@ -7,6 +7,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { IntroComponent } from './shared/components/intro/intro.component';
 import { TextContainerComponent } from './shared/components/text-container/text-container.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 @NgModule({
   declarations: [
@@ -14,13 +17,10 @@ import { TextContainerComponent } from './shared/components/text-container/text-
     HomeComponent,
     NavbarComponent,
     IntroComponent,
-    TextContainerComponent
+    TextContainerComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  imports: [BrowserModule, AppRoutingModule, MatIconModule, MatButtonModule],
+  providers: [provideAnimationsAsync()],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

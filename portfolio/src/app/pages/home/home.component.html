@@ -1,4 +1,19 @@
 <div class="frame">
-  <div class="zone"></div>
-  <app-intro class="intro"></app-intro>
+    <div class="zone innerZone" [style]="this.getStyle('inner')">
+        <button mat-icon-button (click)="this.growInner()" *ngIf="this.inner < 30">
+            <mat-icon>chevron_right</mat-icon>
+        </button>
+        <button mat-icon-button (click)="this.shrinkInner()" *ngIf="this.inner >= 30">
+            <mat-icon>chevron_left</mat-icon>
+        </button>
+    </div>
+    <div class="zone" [style]="this.getStyle('outer')">
+        <button mat-icon-button (click)="this.growOuter()" *ngIf="this.outer < 30 && this.inner < 30">
+            <mat-icon>chevron_right</mat-icon>
+        </button>
+        <button mat-icon-button (click)="this.shrinkOuter()" *ngIf="this.outer >= 30 || this.inner >= 30">
+            <mat-icon>chevron_left</mat-icon>
+        </button>
+    </div>
+    <app-intro class="intro"></app-intro>
 </div>
