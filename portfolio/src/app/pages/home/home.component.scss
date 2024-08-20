@@ -1,0 +1,19 @@
+.frame {
+  max-height: 100vh;
+  max-width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  //grid-template-rows: 1fr 1fr;
+  gap: 1px;
+}
+
+.zone {
+  width: 100%;
+  height: 100%;
+  background-color: aqua;
+}
+
+.intro {
+  width: 50vw;
+  height: 100vh;
+}

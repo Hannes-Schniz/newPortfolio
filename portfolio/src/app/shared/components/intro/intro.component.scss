@@ -1,0 +1,147 @@
+.frame {
+  height: inherit;
+  width: inherit;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  grid-template-areas:
+    "one two"
+    "three four"
+    "five six";
+
+  .one {
+    grid-area: one;
+  }
+  .one:hover {
+    animation: zoomIntopleft 0.1s linear;
+    animation-fill-mode: forwards;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+
+    .textContainer {
+      display: flex;
+    }
+  }
+  .two {
+    grid-area: two;
+  }
+  .two:hover {
+    animation: zoomIntopright 0.1s linear;
+    animation-fill-mode: forwards;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+
+    .textContainer {
+      display: flex;
+    }
+  }
+  .three {
+    grid-area: three;
+  }
+  .three:hover {
+    animation: zoomInLeft 0.1s linear;
+    animation-fill-mode: forwards;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+
+    .textContainer {
+      display: flex;
+    }
+  }
+  .four {
+    grid-area: four;
+  }
+  .four:hover {
+    animation: zoomInRight 0.1s linear;
+    animation-fill-mode: forwards;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+
+    .textContainer {
+      display: flex;
+    }
+  }
+  .five {
+    grid-area: five;
+  }
+  .five:hover {
+    animation: zoomInbottomleft 0.1s linear;
+    animation-fill-mode: forwards;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+
+    .textContainer {
+      display: flex;
+    }
+  }
+  .six {
+    grid-area: six;
+  }
+  .six:hover {
+    animation: zoomInbottomright 0.1s linear;
+    animation-fill-mode: forwards;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+
+    .textContainer {
+      display: flex;
+    }
+  }
+
+  .zone {
+    border: 1px solid black;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .textContainer {
+    height: 50%;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: none;
+  }
+}
+
+@keyframes zoomInbottomleft {
+  to {
+    transform: scale(1.2);
+    transform-origin: bottom left;
+  }
+}
+
+@keyframes zoomInbottomright {
+  to {
+    transform: scale(1.2);
+    transform-origin: bottom right;
+  }
+}
+
+@keyframes zoomIntopleft {
+  to {
+    transform: scale(1.2);
+    transform-origin: top left;
+  }
+}
+
+@keyframes zoomIntopright {
+  to {
+    transform: scale(1.2);
+    transform-origin: top right;
+  }
+}
+
+@keyframes zoomInLeft {
+  to {
+    transform: scale(1.2);
+    transform-origin: left;
+  }
+}
+
+@keyframes zoomInRight {
+  to {
+    transform: scale(1.2);
+    transform-origin: right;
+  }
+}
