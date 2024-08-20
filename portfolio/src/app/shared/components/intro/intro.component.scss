@@ -178,28 +178,3 @@
     transform: scale(1.2);
   }
 }
-
-.fadeOut {
-  animation: fadeOut 0.5s linear;
-  animation-fill-mode: forwards;
-}
-
-.fadeIn {
-  animation: fadeIn 0.5s linear;
-  animation-fill-mode: forwards;
-}
-
-@keyframes fadeOut {
-  to {
-    opacity: 0;
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}

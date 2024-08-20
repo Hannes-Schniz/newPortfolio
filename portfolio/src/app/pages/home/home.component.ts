@@ -6,8 +6,13 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
-  inner = 5;
-  outer = 5;
+  MIN_WIDTH = 3;
+  MAX_WIDTH = 30;
+
+  buttonStyle = 'width: ' + this.MIN_WIDTH + 'vw';
+
+  inner = this.MIN_WIDTH;
+  outer = this.MIN_WIDTH;
   getStyle(field: string): string {
     if (field == 'inner') {
       return 'width: ' + this.inner + 'vw;';
@@ -17,13 +22,13 @@ export class HomeComponent {
 
   growInner(): void {
     let time = setInterval(() => {
-      if (this.inner == 30) {
-        this.outer = 5;
+      if (this.inner == this.MAX_WIDTH) {
+        this.outer = this.MIN_WIDTH;
         clearInterval(time);
         return;
       }
       this.inner += 1;
-      if (this.outer > 5) {
+      if (this.outer > this.MIN_WIDTH) {
         this.outer -= 1;
       }
     }, 10);
@@ -31,12 +36,12 @@ export class HomeComponent {
 
   shrinkInner(): void {
     let time = setInterval(() => {
-      if (this.inner == 5) {
+      if (this.inner == this.MIN_WIDTH) {
         clearInterval(time);
         return;
       }
       this.inner -= 1;
-      if (this.outer < 30) {
+      if (this.outer < this.MAX_WIDTH) {
         this.outer += 1;
       }
     }, 10);
@@ -44,28 +49,28 @@ export class HomeComponent {
 
   growOuter(): void {
     let time = setInterval(() => {
-      if (this.outer == 30) {
+      if (this.outer == this.MAX_WIDTH) {
         clearInterval(time);
         return;
       }
       this.outer += 1;
-      if (this.inner > 5) {
+      if (this.inner > this.MIN_WIDTH) {
         this.inner -= 1;
       }
     }, 10);
   }
 
   shrinkOuter(): void {
-    let shrinkBoth = this.inner >= 30;
+    let shrinkBoth = this.inner >= this.MAX_WIDTH;
     let time = setInterval(() => {
-      if (this.outer == 5 && this.inner == 5) {
+      if (this.outer == this.MIN_WIDTH && this.inner == this.MIN_WIDTH) {
         clearInterval(time);
         return;
       }
-      if (this.outer > 5) {
+      if (this.outer > this.MIN_WIDTH) {
         this.outer -= 1;
       }
-      if (shrinkBoth && this.inner > 5) {
+      if (shrinkBoth && this.inner > this.MIN_WIDTH) {
         this.inner -= 1;
       }
     }, 10);
