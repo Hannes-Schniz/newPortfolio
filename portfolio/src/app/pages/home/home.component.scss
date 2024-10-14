@@ -1,44 +1,42 @@
 .frame {
-  max-height: 100vh;
-  max-width: 100vw;
-  display: grid;
-  grid-template-columns: minmax(0, auto) minmax(0, auto) minmax(0, auto);
-  //grid-template-rows: 1fr 1fr;
-}
-
-.zone {
-  height: 100%;
-  background-color: aqua;
-  border: 1px solid black;
-  display: flex;
-  justify-content: end;
-  flex-direction: row;
-
-  button {
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.404);
-    padding: 0 !important;
-    //border: none;
-    cursor: pointer;
-    border-radius: 0 !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border-left: 1px solid black;
-
-    mat-icon {
-      margin: 0 !important;
-      color: black;
-    }
-  }
-}
-
-.innerZone {
-  background-color: coral;
-}
-
-.intro {
-  width: 100%;
   height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
+.content {
+  background-color: #686D76;
+  backdrop-filter: blur(2px);
+  width: 70%;
+  height: 50%;
+  display: grid;
+  border: #DC5F00 solid 5px;
+  padding: 1%;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px; 
+}
+
+.imageGrid { grid-area: 1 / 1 / 3 / 3; }
+.linksGrid { grid-area: 3 / 1 / 4 / 3; }
+.textGrid { grid-area: 1 / 3 / 4 / 6; } 
+
+.center {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  object-fit:cover;
+  border-radius: 10%;
+}
+
+
+
