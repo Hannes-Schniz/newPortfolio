@@ -10,6 +10,7 @@ import { TextContainerComponent } from './shared/components/text-container/text-
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { ProjectComponent } from './pages/project/project.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     NavbarComponent,
     IntroComponent,
     TextContainerComponent,
+    ProjectComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, MatIconModule, MatButtonModule],
   providers: [provideAnimationsAsync()],
