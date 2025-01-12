@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
-  MIN_WIDTH = 3;
+  MIN_WIDTH = window.innerWidth < 768 ? 3 : 5;
   MAX_WIDTH = 30;
 
   buttonStyle = 'width: ' + this.MIN_WIDTH + 'vw';

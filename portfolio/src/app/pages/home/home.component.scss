@@ -26,10 +26,10 @@
     align-items: center;
     flex-direction: column;
     border-left: 1px solid black;
-
     mat-icon {
       margin: 0 !important;
       color: black;
+      width: fit-content;
     }
   }
 }
@@ -39,7 +39,7 @@
 }
 
 .intro {
-  width: 94vw;
+  width: 96vw;
   height: 100vh;
   //overflow-y: hidden;
 }
