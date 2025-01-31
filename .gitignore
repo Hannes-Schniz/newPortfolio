@@ -72,3 +72,5 @@ node_modules/
 
 porfolio/package-lock.json
 porfolio/environment.ts
+
+package-lock.json
