@@ -69,3 +69,6 @@ node_modules/
 .dataconnect
 
 .public/*
+
+porfolio/package-lock.json
+porfolio/environment.ts

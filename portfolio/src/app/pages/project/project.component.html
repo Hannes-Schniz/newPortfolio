@@ -1,0 +1,19 @@
+<div *ngFor="let project of projects" class="projectCard">
+  <div class="leftSide">
+    <div class="projectInfo">
+      <h2>{{ project.name }}</h2>
+      <p>{{ project.description }}</p>
+
+
+    </div>
+    <div class="footer">
+      <div class="chips">
+        <mat-chip *ngFor="let tag of project.categories" class="chip">{{ tag }}</mat-chip>
+      </div>
+    </div>
+  </div>
+  <div class="rightSide">
+    <div class="fade"></div>
+    <img [src]="project.imageUrl" alt="project image" class="projectImage">
+  </div>
+</div>
