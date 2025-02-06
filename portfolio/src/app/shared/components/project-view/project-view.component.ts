@@ -1,0 +1,12 @@
+import { Component, Input } from '@angular/core';
+
+@Component({
+  selector: 'app-project-view',
+  templateUrl: './project-view.component.html',
+  styleUrl: './project-view.component.scss'
+})
+export class ProjectViewComponent {
+
+  @Input() project: any;
+
+}

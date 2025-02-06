@@ -7,14 +7,16 @@ import { PortfolioAPIService } from '../../shared/services/portfolio-api.service
   styleUrl: './project.component.scss',
 })
 export class ProjectComponent {
-  projects: any = 'test';
+  project: any;
   constructor(public projectAPI: PortfolioAPIService) {
-    this.projectAPI.getAllProjects()?.subscribe((projects) => {
-      this.projects = projects;
+    const params = new URLSearchParams(window.location.search);
+    const projectID = params.get('projectID');
+    this.projectAPI.getProject(projectID!)?.subscribe((projects) => {
+      this.project = projects;
     });
     //timeout
     setTimeout(() => {
-      console.log(this.projects[0]);
+      console.log(this.project[0]);
     }, 1000);
   }
 }

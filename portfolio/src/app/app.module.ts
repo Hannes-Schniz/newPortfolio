@@ -15,8 +15,10 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { environment } from '../../environment';
 import { MatCardModule } from '@angular/material/card';
-import { MatChipsModule, MatChipListbox } from '@angular/material/chips';
+import { MatChipsModule } from '@angular/material/chips';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { ProjectsComponent } from './pages/projects/projects.component';
+import { ProjectViewComponent } from './shared/components/project-view/project-view.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     IntroComponent,
     TextContainerComponent,
     ProjectComponent,
+    ProjectsComponent,
+    ProjectViewComponent,
   ],
   imports: [
     BrowserModule,
