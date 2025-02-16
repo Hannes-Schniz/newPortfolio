@@ -3,6 +3,15 @@
     <div class="projectInfo">
       <h2>{{ project.name }}</h2>
       <p *ngFor="let desc of project.description">{{ desc }}</p>
+      <div class="gitLink" *ngIf="project.gitLink">
+        <a [href]="project.gitLink" target="_blank">
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/portfolio-b1b9c.appspot.com/o/icons8-git-480.png?alt=media&token=4603daef-cdda-48f0-b8b7-7b0c341d9fcf"
+            alt="github icon"
+            class="gitIcon"
+          />
+        </a>
+      </div>
     </div>
     <div class="footer">
       <div class="chips">
@@ -14,6 +23,8 @@
   </div>
   <div class="rightSide">
     <div class="fade"></div>
+    <div class="fadeUp"></div>
     <img [src]="project.imageUrl" alt="project image" class="projectImage" />
+    <div class="fadeDown"></div>
   </div>
 </div>

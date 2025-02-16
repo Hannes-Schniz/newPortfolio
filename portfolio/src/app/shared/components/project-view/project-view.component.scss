@@ -46,6 +46,25 @@
       font-size: 1rem;
       margin-bottom: 1rem;
     }
+
+    .gitLink {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1rem;
+
+      a {
+        text-decoration: none;
+        color: white;
+        font-size: 1rem;
+        margin-right: 1rem;
+      }
+
+      .gitIcon {
+        height: 50px;
+      }
+    }
   }
 }
 
