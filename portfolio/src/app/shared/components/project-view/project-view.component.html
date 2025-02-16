@@ -2,7 +2,9 @@
   <div class="leftSide">
     <div class="projectInfo">
       <h2>{{ project.name }}</h2>
-      <p *ngFor="let desc of project.description">{{ desc }}</p>
+      <div class="description">
+        <p *ngFor="let desc of project.description">{{ desc }}</p>
+      </div>
     </div>
     <div class="footer">
       <div class="chips">
