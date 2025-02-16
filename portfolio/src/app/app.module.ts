@@ -19,6 +19,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { ProjectViewComponent } from './shared/components/project-view/project-view.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { ProjectViewComponent } from './shared/components/project-view/project-v
     MatProgressBarModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
+    MatToolbarModule,
   ],
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],
